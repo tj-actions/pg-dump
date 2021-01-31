@@ -9,6 +9,10 @@ Run pg_dump to generate a backup
       - uses: actions/checkout@v2
       - name: Postgres Dump Backup
         uses: tj-actions/pg-dump@v1
+        with:
+          database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
+          path: "backups/backup.sql" 
+          options: "-O"   
 ```
 
 
@@ -16,16 +20,13 @@ Run pg_dump to generate a backup
 
 |   Input       |    type    |  required     |  default                      |  description  |
 |:-------------:|:-----------:|:-------------:|:----------------------------:|:-------------:|
-| token         |  `string`   |    `true`    | `${{ github.token }}` | [GITHUB_TOKEN](https://docs.github.com/en/free-pro-team@latest/actions/reference/authentication-in-a-workflow#using-the-github_token-in-a-workflow) <br /> or a repo scoped <br /> [Personal Access Token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)              |
+| database_url  |  `string`   |    `true`    |                              |  Database URL  |
+| path          |  `string`   |    `true`    |                              |  Backup file output location  |
+| options       |  `string`   |    `true`    |      `-O`                    |  Extra [options](https://www.postgresql.org/docs/9.6/app-pgdump.html#PG-DUMP-OPTIONS) passed to pg_dump  |
 
 
 
 * Free software: [MIT license](LICENSE)
-
-Features
---------
-
-* TODO
 
 
 Credits
