@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Test postgres-restore
+    services:
+      postgres:
+        image: postgres:9.6
+        env:
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_user_password
+          POSTGRES_DB: testdb
+        ports:
+          - 5432:5432
+        # needed because the postgres container does not provide a healthcheck
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Run pg_dump
+        uses: ./
+        with:
+          database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
+          path: "backups/backup.sql"
+
+      - name: Check changes to backup file.
+        id: changed_backup
+        uses: tj-actions/verify-changed-files@v5.1
+        with:
+          files: backups/backup.sql
+
+      - name: Commit changes to backup file.
+        if: steps.changed_backup.outputs.files_changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add backups/backup.sql
+          git commit -m "Auto update backup.sql."
+
+      - name: Push changes
+        if: steps.changed_backup.outputs.files_changed == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          branch: ${{ github.head_ref }}

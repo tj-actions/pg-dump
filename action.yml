@@ -1,0 +1,24 @@
+name: Postgres Dump Backup
+description: Run pg_dump to generate a backup
+author: tj-actions
+inputs:
+  database_url:
+    description: 'Database URL'
+    required: true
+  path:
+    description: 'Backup file output location'
+    required: true
+  args:
+    description: 'Extra arguments passed to pg_dump'
+    required: true
+    default: '-O'
+
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        pg_dump "${{ inputs.args }}" -d "${{ inputs.database_url }}" > "${{ inputs.path }}"
+      shell: bash
+branding:
+  icon: hard-drive
+  color: white
