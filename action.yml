@@ -17,7 +17,7 @@ runs:
   using: 'composite'
   steps:
     - run: |
-        pg_dump "${{ inputs.options }}" -d "${{ inputs.database_url }}" -f "${{ inputs.path }}"
+        pg_dump "${{ inputs.options }}" -f "${{ inputs.path }}" -d "${{ inputs.database_url }}"
       shell: bash
 branding:
   icon: hard-drive
