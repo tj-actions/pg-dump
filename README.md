@@ -1,5 +1,5 @@
-pg-dump
--------
+[pg-dump](https://www.postgresql.org/docs/9.6/app-pgdump.html)
+---------
 
 Run pg_dump to generate a backup
 
