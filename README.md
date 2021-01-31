@@ -15,6 +15,24 @@ Run [pg_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate a
           options: "-O"   
 ```
 
+> NOTE: Ensure the backup output file exists.
+
+Example
+```yaml
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create backup file
+        run: |
+          touch backups/backup.sql
+      - name: Postgres Dump Backup
+        uses: tj-actions/pg-dump@v1
+        with:
+          database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
+          path: "backups/backup.sql" 
+          options: "-O"   
+
+```
+
 
 ## Inputs
 
