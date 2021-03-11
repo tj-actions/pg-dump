@@ -1,3 +1,5 @@
+[![CI](https://github.com/tj-actions/pg-dump/actions/workflows/test.yml/badge.svg)](https://github.com/tj-actions/pg-dump/actions/workflows/test.yml) 
+
 [pg-dump](https://www.postgresql.org/docs/9.6/app-pgdump.html)
 ---------
 
