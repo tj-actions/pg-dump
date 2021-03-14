@@ -55,7 +55,7 @@ jobs:
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
-        if: steps.changed_backup.outputs.files_changed == 'true'
+        if: failure()
         with:
           base: "main"
           title: "[Backup] Updated test database backup"
