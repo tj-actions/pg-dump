@@ -27,6 +27,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
       - name: Run pg_dump
         uses: ./
         with:
@@ -43,3 +44,23 @@ jobs:
         if: steps.changed_backup.outputs.files_changed == 'true'
         run: |
           exit 1;
+          
+      - name: Commit changes to backup file.
+        if: failure()
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add backups/backup.sql
+          git commit -m "Auto updated backup.sql."
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        if: failure()
+        with:
+          base: "main"
+          title: "[Backup] Updated test database backup"
+          branch: "chore/update-test-db-backup"
+          commit-message: "Modified test database backup using latest migration changes."
+          body: "Updated test database backup."
+          reviewers: "jackton1"
+          token: ${{ secrets.PAT_TOKEN }}
