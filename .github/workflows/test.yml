@@ -27,7 +27,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-
+        with:
+          fetch-depth: 0  # otherwise, you will failed to push refs to dest repo
+          persist-credentials: false  # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
       - name: Run pg_dump
         uses: ./
         with:
@@ -52,15 +54,10 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add backups/backup.sql
           git commit -m "Auto updated backup.sql."
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+      
+      - name: Push changes
         if: failure()
+        uses: ad-m/github-push-action@master
         with:
-          base: "main"
-          title: "[Backup] Updated test database backup"
-          branch: "chore/update-test-db-backup"
-          commit-message: "Modified test database backup using latest migration changes."
-          body: "Updated test database backup."
-          reviewers: "jackton1"
-          token: ${{ secrets.PAT_TOKEN }}
+          github_token: ${{ secrets.PAT_TOKEN }}
+          branch: ${{ github.head_ref }}
