@@ -12,7 +12,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Bumpversion release version
-        uses: tj-actions/bumpversion@v7.2
+        uses: tj-actions/bumpversion@v8.4
         id: bumpversion
         with:
           pattern: 'tj-actions/pg-dump@'
