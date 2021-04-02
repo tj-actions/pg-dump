@@ -17,7 +17,8 @@ Run [pg_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate a
           options: "-O"   
 ```
 
-> NOTE: :warning: Ensure the backup output file already exists.
+> NOTE: :warning: 
+> * Ensure the backup output file already exists.
 
 Example
 ```yaml
