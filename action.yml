@@ -1,4 +1,4 @@
-name: pg_dump
+name: pg-dump
 description: Run pg_dump to generate a backup
 author: tj-actions
 inputs:
