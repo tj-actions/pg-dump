@@ -1,7 +1,7 @@
 [![CI](https://github.com/tj-actions/pg-dump/actions/workflows/test.yml/badge.svg)](https://github.com/tj-actions/pg-dump/actions/workflows/test.yml) [![Update release version.](https://github.com/tj-actions/pg-dump/actions/workflows/sync-release-version.yml/badge.svg)](https://github.com/tj-actions/pg-dump/actions/workflows/sync-release-version.yml)
 
-[pg-dump](https://www.postgresql.org/docs/9.6/app-pgdump.html)
----------
+pg-dump
+-------
 
 Run [pg_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate a backup
 
