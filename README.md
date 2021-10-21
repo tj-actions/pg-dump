@@ -9,7 +9,7 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
     steps:
       - uses: actions/checkout@v2
       - name: Postgres Dump Backup
-        uses: tj-actions/pg-dump@v1
+        uses: tj-actions/pg-dump@v2.2
         with:
           database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
           path: "backups/backup.sql" 
