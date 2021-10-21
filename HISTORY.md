@@ -1,12 +1,27 @@
 # Changelog
 
-## [v2.2](https://github.com/tj-actions/pg-dump/tree/v2.2) (2021-10-04)
+## [v2.3](https://github.com/tj-actions/pg-dump/tree/v2.3) (2021-10-21)
 
-[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.1...v2.2)
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.2...v2.3)
+
+**Implemented enhancements:**
+
+- \[Feature\] Choose Postgres version [\#35](https://github.com/tj-actions/pg-dump/issues/35)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#7](https://github.com/tj-actions/pg-dump/issues/7)
+
+**Merged pull requests:**
+
+- Bump tj-actions/sync-release-version from 8.7 to 9 [\#41](https://github.com/tj-actions/pg-dump/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update actions/checkout action to v2.3.5 [\#40](https://github.com/tj-actions/pg-dump/pull/40) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/verify-changed-files action to v8 [\#39](https://github.com/tj-actions/pg-dump/pull/39) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v2.2 [\#38](https://github.com/tj-actions/pg-dump/pull/38) ([jackton1](https://github.com/jackton1))
+
+## [v2.2](https://github.com/tj-actions/pg-dump/tree/v2.2) (2021-10-04)
+
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.1...v2.2)
 
 **Merged pull requests:**
 
