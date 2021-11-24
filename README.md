@@ -4,6 +4,8 @@
 
 Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate a backup
 
+## Usage
+
 ```yaml
 ...
     steps:
@@ -16,6 +18,16 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
           options: "-O"   
 ```
 
+If you feel generous and want to show some extra appreciation:
+
+Support this project with a :star:
+
+[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
+
+[buymeacoffee]: https://www.buymeacoffee.com/jackton1
+
+[buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png
+
 ## Inputs
 
 |   Input       |    type    |  required     |  default                      |  description  |
@@ -25,14 +37,6 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
 | options       |  `string`   |    `true`    |      `-O`                    |  Extra [options](https://www.postgresql.org/docs/9.6/app-pgdump.html#PG-DUMP-OPTIONS) passed to pg\_dump  |
 
 *   Free software: [MIT license](LICENSE)
-
-If you feel generous and want to show some extra appreciation:
-
-[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
-
-[buymeacoffee]: https://www.buymeacoffee.com/jackton1
-
-[buymeacoffee-shield]: https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png
 
 ## Credits
 
