@@ -38,7 +38,7 @@ jobs:
 
       - name: Check changes to backup file.
         id: changed_backup
-        uses: tj-actions/verify-changed-files@v12
+        uses: tj-actions/verify-changed-files@v13
         with:
           files: backups/backup.sql
 
