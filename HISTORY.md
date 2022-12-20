@@ -1,20 +1,43 @@
 # Changelog
 
-## [v2.4](https://github.com/tj-actions/pg-dump/tree/v2.4) (2022-10-06)
+## [Unreleased](https://github.com/tj-actions/pg-dump/tree/HEAD)
 
-[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2...v2.4)
-
-## [v2](https://github.com/tj-actions/pg-dump/tree/v2) (2022-10-06)
-
-[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.3...v2)
-
-**Fixed bugs:**
-
-- \[BUG\] Adding more than 1 option breaks the argument [\#42](https://github.com/tj-actions/pg-dump/issues/42)
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.5...HEAD)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#7](https://github.com/tj-actions/pg-dump/issues/7)
+
+## [v2.5](https://github.com/tj-actions/pg-dump/tree/v2.5) (2022-12-15)
+
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2...v2.5)
+
+## [v2](https://github.com/tj-actions/pg-dump/tree/v2) (2022-12-15)
+
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.4...v2)
+
+**Merged pull requests:**
+
+- Update tj-actions/verify-changed-files action to v13 [\#98](https://github.com/tj-actions/pg-dump/pull/98) ([renovate[bot]](https://github.com/apps/renovate))
+- Update cirrus-actions/rebase action to v1.8 [\#97](https://github.com/tj-actions/pg-dump/pull/97) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.2.0 [\#96](https://github.com/tj-actions/pg-dump/pull/96) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.2.3 [\#94](https://github.com/tj-actions/pg-dump/pull/94) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.2.2 [\#93](https://github.com/tj-actions/pg-dump/pull/93) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.2.1 [\#92](https://github.com/tj-actions/pg-dump/pull/92) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump hmarr/auto-approve-action from 2 to 3 [\#91](https://github.com/tj-actions/pg-dump/pull/91) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update peter-evans/create-pull-request action to v4.2.0 [\#90](https://github.com/tj-actions/pg-dump/pull/90) ([renovate[bot]](https://github.com/apps/renovate))
+- Update pascalgn/automerge-action action to v0.15.5 [\#89](https://github.com/tj-actions/pg-dump/pull/89) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.1.4 [\#88](https://github.com/tj-actions/pg-dump/pull/88) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/verify-changed-files action to v12 [\#87](https://github.com/tj-actions/pg-dump/pull/87) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v2.4 [\#86](https://github.com/tj-actions/pg-dump/pull/86) ([jackton1](https://github.com/jackton1))
+
+## [v2.4](https://github.com/tj-actions/pg-dump/tree/v2.4) (2022-10-06)
+
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.3...v2.4)
+
+**Fixed bugs:**
+
+- \[BUG\] Adding more than 1 option breaks the argument [\#42](https://github.com/tj-actions/pg-dump/issues/42)
 
 **Merged pull requests:**
 
