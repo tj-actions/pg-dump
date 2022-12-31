@@ -31,6 +31,16 @@ Support this project with a :star:
 
 ## Inputs
 
+<!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
+
+|    INPUT     |  TYPE  | REQUIRED | DEFAULT |            DESCRIPTION            |
+|--------------|--------|----------|---------|-----------------------------------|
+| database\_url | string |   true   |         |           Database URL            |
+|   options    | string |   true   | `"-O"`  | Extra arguments passed to pg\_dump |
+|     path     | string |   true   |         |    Backup file output location    |
+
+<!-- AUTO-DOC-INPUT:END -->
+
 |   Input       |    type    |  required     |  default                      |  description  |
 |:-------------:|:-----------:|:-------------:|:----------------------------:|:-------------:|
 | database\_url  |  `string`   |    `true`    |                              |  Database URL  |
