@@ -9,7 +9,7 @@ inputs:
     description: 'Backup file output location'
     required: true
   options:
-    description: 'Extra arguments passed to pg_dump'
+    description: 'Extra [options](https://www.postgresql.org/docs/current/app-pgdump.html#PG-DUMP-OPTIONS) passed to pg_dump'
     required: true
     default: '-O'
 
