@@ -33,11 +33,11 @@ Support this project with a :star:
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|    INPUT     |  TYPE  | REQUIRED | DEFAULT |            DESCRIPTION            |
-|--------------|--------|----------|---------|-----------------------------------|
-| database\_url | string |   true   |         |           Database URL            |
-|   options    | string |   true   | `"-O"`  | Extra arguments passed to pg\_dump |
-|     path     | string |   true   |         |    Backup file output location    |
+|    INPUT     |  TYPE  | REQUIRED | DEFAULT |                                                DESCRIPTION                                                 |
+|--------------|--------|----------|---------|------------------------------------------------------------------------------------------------------------|
+| database\_url | string |   true   |         |                                                Database URL                                                |
+|   options    | string |   true   | `"-O"`  | Extra [options](https://www.postgresql.org/docs/current/app-pgdump.html#PG-DUMP-OPTIONS) passed to pg\_dump |
+|     path     | string |   true   |         |                                        Backup file output location                                         |
 
 <!-- AUTO-DOC-INPUT:END -->
 
