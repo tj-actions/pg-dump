@@ -45,7 +45,7 @@ Support this project with a :star:
 |:-------------:|:-----------:|:-------------:|:----------------------------:|:-------------:|
 | database\_url  |  `string`   |    `true`    |                              |  Database URL  |
 | path          |  `string`   |    `true`    |                              |  Backup file output location  |
-| options       |  `string`   |    `true`    |      `-O`                    |  Extra [options](https://www.postgresql.org/docs/9.6/app-pgdump.html#PG-DUMP-OPTIONS) passed to pg\_dump  |
+| options       |  `string`   |    `true`    |      `-O`                    |  Extra [options](https://www.postgresql.org/docs/current/app-pgdump.html#PG-DUMP-OPTIONS) passed to pg\_dump  |
 
 *   Free software: [MIT license](LICENSE)
 
