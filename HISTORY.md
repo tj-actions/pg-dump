@@ -2,19 +2,48 @@
 
 ## [Unreleased](https://github.com/tj-actions/pg-dump/tree/HEAD)
 
-[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.5...HEAD)
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.6...HEAD)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#7](https://github.com/tj-actions/pg-dump/issues/7)
 
+## [v2.6](https://github.com/tj-actions/pg-dump/tree/v2.6) (2023-06-11)
+
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2...v2.6)
+
+## [v2](https://github.com/tj-actions/pg-dump/tree/v2) (2023-06-11)
+
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.5...v2)
+
+**Merged pull requests:**
+
+- Update actions/checkout action to v3.5.3 [\#121](https://github.com/tj-actions/pg-dump/pull/121) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/github-changelog-generator action to v1.19 [\#119](https://github.com/tj-actions/pg-dump/pull/119) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v5.0.1 [\#118](https://github.com/tj-actions/pg-dump/pull/118) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.5.2 [\#117](https://github.com/tj-actions/pg-dump/pull/117) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.5.1 [\#116](https://github.com/tj-actions/pg-dump/pull/116) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v5 [\#115](https://github.com/tj-actions/pg-dump/pull/115) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.5.0 [\#114](https://github.com/tj-actions/pg-dump/pull/114) ([renovate[bot]](https://github.com/apps/renovate))
+- Bump tj-actions/verify-changed-files from 13 to 14 [\#113](https://github.com/tj-actions/pg-dump/pull/113) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update actions/checkout action to v3.4.0 [\#112](https://github.com/tj-actions/pg-dump/pull/112) ([renovate[bot]](https://github.com/apps/renovate))
+- Update peter-evans/create-pull-request action to v4.2.4 [\#111](https://github.com/tj-actions/pg-dump/pull/111) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/release-tagger action to v3 [\#110](https://github.com/tj-actions/pg-dump/pull/110) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/github-changelog-generator action to v1.18 [\#109](https://github.com/tj-actions/pg-dump/pull/109) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v2 [\#108](https://github.com/tj-actions/pg-dump/pull/108) ([renovate[bot]](https://github.com/apps/renovate))
+- Update codacy/codacy-analysis-cli-action action to v4.3.0 [\#107](https://github.com/tj-actions/pg-dump/pull/107) ([renovate[bot]](https://github.com/apps/renovate))
+- Update pascalgn/automerge-action action to v0.15.6 [\#106](https://github.com/tj-actions/pg-dump/pull/106) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#105](https://github.com/tj-actions/pg-dump/pull/105) ([jackton1](https://github.com/jackton1))
+- Update actions/checkout action to v3.3.0 [\#104](https://github.com/tj-actions/pg-dump/pull/104) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v1.7.3 [\#103](https://github.com/tj-actions/pg-dump/pull/103) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v1.7.2 [\#102](https://github.com/tj-actions/pg-dump/pull/102) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#101](https://github.com/tj-actions/pg-dump/pull/101) ([jackton1](https://github.com/jackton1))
+- Bump tj-actions/github-changelog-generator from 1.15 to 1.17 [\#100](https://github.com/tj-actions/pg-dump/pull/100) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Upgraded to v2.5 [\#99](https://github.com/tj-actions/pg-dump/pull/99) ([jackton1](https://github.com/jackton1))
+
 ## [v2.5](https://github.com/tj-actions/pg-dump/tree/v2.5) (2022-12-15)
 
-[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2...v2.5)
-
-## [v2](https://github.com/tj-actions/pg-dump/tree/v2) (2022-12-15)
-
-[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.4...v2)
+[Full Changelog](https://github.com/tj-actions/pg-dump/compare/v2.4...v2.5)
 
 **Merged pull requests:**
 
