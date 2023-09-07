@@ -41,14 +41,9 @@ jobs:
         uses: tj-actions/verify-changed-files@v16
         with:
           files: backups/backup.sql
-
-      - name: Raise error
-        if: steps.changed_backup.outputs.files_changed == 'true'
-        run: |
-          exit 1;
           
       - name: Commit changes to backup file.
-        if: failure()
+        if: steps.changed_backup.outputs.files_changed == 'true'
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
@@ -56,7 +51,7 @@ jobs:
           git commit -m "Auto updated backup.sql."
       
       - name: Push changes
-        if: failure()
+        if: steps.changed_backup.outputs.files_changed == 'true'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.PAT_TOKEN }}
