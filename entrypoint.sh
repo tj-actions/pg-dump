@@ -61,13 +61,13 @@ if [[ -n "$INPUT_POSTGRESQL_VERSION" ]]; then
     
     # Verify installation by running pg_dump directly
     if [[ "$(uname -s)" == "NT"* ]]; then
-        "/Program Files/PostgreSQL/15/bin/pg_dump" --version
+        "/Program Files/PostgreSQL/$INPUT_POSTGRESQL_VERSION/bin/pg_dump" --version
         # shellcheck disable=SC2086
-        "/Program Files/PostgreSQL/15/bin/pg_dump" $INPUT_OPTIONS -d "$INPUT_DATABASE_URL" > "$INPUT_PATH"
+        "/Program Files/PostgreSQL/$INPUT_POSTGRESQL_VERSION/bin/pg_dump" $INPUT_OPTIONS -d "$INPUT_DATABASE_URL" > "$INPUT_PATH"
     else
-        "/usr/lib/postgresql/15/bin/pg_dump" --version
+        "/usr/lib/postgresql/$INPUT_POSTGRESQL_VERSION/bin/pg_dump" --version
         # shellcheck disable=SC2086
-        "/usr/lib/postgresql/15/bin/pg_dump" $INPUT_OPTIONS -d "$INPUT_DATABASE_URL" > "$INPUT_PATH"
+        "/usr/lib/postgresql/$INPUT_POSTGRESQL_VERSION/bin/pg_dump" $INPUT_OPTIONS -d "$INPUT_DATABASE_URL" > "$INPUT_PATH"
     fi
 else
     echo "Running pg_dump..."
