@@ -55,19 +55,26 @@ if [[ -n "$INPUT_POSTGRESQL_VERSION" ]]; then
         exit 1
     fi
 
-    if [[ "$(uname -s)" == "NT"* ]]; then
-        echo "/Program Files/PostgreSQL/15/bin" >> "$GITHUB_PATH"
-    else
-        echo "/usr/lib/postgresql/15/bin" >> "$GITHUB_PATH"
-    fi
-
     echo "Installed postgresql"
+
+    echo "Running pg_dump..."
+    
+    # Verify installation by running pg_dump directly
+    if [[ "$(uname -s)" == "NT"* ]]; then
+        "/Program Files/PostgreSQL/15/bin/pg_dump" --version
+        # shellcheck disable=SC2086
+        "/Program Files/PostgreSQL/15/bin/pg_dump" $INPUT_OPTIONS -d "$INPUT_DATABASE_URL" > "$INPUT_PATH"
+    else
+        "/usr/lib/postgresql/15/bin/pg_dump" --version
+        # shellcheck disable=SC2086
+        "/usr/lib/postgresql/15/bin/pg_dump" $INPUT_OPTIONS -d "$INPUT_DATABASE_URL" > "$INPUT_PATH"
+    fi
+else
+    echo "Running pg_dump..."
+
+    # shellcheck disable=SC2086
+    pg_dump $INPUT_OPTIONS -d "$INPUT_DATABASE_URL" > "$INPUT_PATH"
 fi
-
-echo "Running pg_dump..."
-
-# shellcheck disable=SC2086
-pg_dump $INPUT_OPTIONS -d "$INPUT_DATABASE_URL" > "$INPUT_PATH"
 
 echo "Complete"
 
