@@ -2,6 +2,9 @@ name: pg-dump
 description: Run pg_dump to generate a backup
 author: tj-actions
 inputs:
+  postgresql_version: 
+    description: 'Version of PostgreSQL. e.g 15'
+    required: false
   database_url:
     description: 'Database URL'
     required: true
