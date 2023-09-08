@@ -6,7 +6,7 @@ echo "::group::pg-dump"
 
 echo "Creating the output directory..."
 
-mkdir -p $(dirname "$INPUT_PATH")
+mkdir -p "$(dirname "$INPUT_PATH")"
 
 echo "Created the output directory"
 
