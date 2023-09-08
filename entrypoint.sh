@@ -4,11 +4,15 @@ set -euo pipefail
 
 echo "::group::pg-dump"
 
-echo "Creating the output directory..."
+echo "Checking if the output directory exists..."
 
-mkdir -p "$(dirname "$INPUT_PATH")"
-
-echo "Created the output directory"
+if [ ! -d "$(dirname "$INPUT_PATH")" ]; then
+    echo "The output directory does not exist. Creating it..."
+    mkdir -p "$(dirname "$INPUT_PATH")"
+    echo "Created the output directory"
+else
+    echo "The output directory already exists"
+fi
 
 if [[ -n "$INPUT_POSTGRESQL_VERSION" ]]; then
     echo "Verifying version"
