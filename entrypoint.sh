@@ -43,9 +43,9 @@ if [[ -n "$INPUT_POSTGRESQL_VERSION" ]]; then
     fi
 
     if [[ "$(uname -s)" == "NT"* ]]; then
-        echo "/Program Files/PostgreSQL/15/bin" >> $GITHUB_PATH
+        echo "/Program Files/PostgreSQL/15/bin" >> "$GITHUB_PATH"
     else
-        echo "/usr/lib/postgresql/15/bin" >> $GITHUB_PATH
+        echo "/usr/lib/postgresql/15/bin" >> "$GITHUB_PATH"
     fi
 
     echo "Installed postgresql"
