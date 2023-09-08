@@ -9,9 +9,72 @@ on:
       - main
 
 jobs:
+  shellcheck:
+    name: Run shellcheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
+      - name: shellcheck
+        uses: reviewdog/action-shellcheck@v1.19
+  test-postgresql:
+    name: Test pg_dump with PostgreSQL version
+    runs-on: ${{ matrix.platform }}
+    strategy:
+      fail-fast: false
+      matrix:
+        platform: [ubuntu-latest, windows-latest, macos-latest, macos-11, windows-2022]
+        postgresql_version: [12, 14, 15]
+    services:
+      postgres:
+        image: postgres:${{ matrix.postgresql_version }}
+        env:
+          POSTGRES_USER: test_user
+          POSTGRES_PASSWORD: test_user_password
+          POSTGRES_DB: testdb
+        ports:
+          - 5432:5432
+        # needed because the postgres container does not provide a healthcheck
+        options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 
+          persist-credentials: false  # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+      - name: Run pg_dump 
+        uses: ./
+        with:
+          database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
+          postgresql_version: ${{ matrix.postgresql_version }}
+          path: "backups/${{ matrix.postgresql_version }}/backup.sql"
+      - name: Check changes to the backup file.
+        id: changed_backup
+        if: matrix.platform == 'ubuntu-latest'
+        uses: tj-actions/verify-changed-files@v16
+        with:
+          files: backups/${{ matrix.postgresql_version }}/backup.sql
+          
+      - name: Commit changes to backup file.
+        if: steps.changed_backup.outputs.files_changed == 'true' && matrix.platform == 'ubuntu-latest'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add backups/${{ matrix.postgresql_version }}/backup.sql
+          git commit -m "Auto updated backup.sql."
+      
+      - name: Push changes
+        if: steps.changed_backup.outputs.files_changed == 'true' && matrix.platform == 'ubuntu-latest'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          branch: ${{ github.head_ref }}
+        
   test:
     runs-on: ubuntu-latest
-    name: Test postgres-restore
+    name: Test pg_dump
     services:
       postgres:
         image: postgres:9.6.24
