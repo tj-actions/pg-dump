@@ -20,7 +20,7 @@ if [[ -n "$INPUT_POSTGRESQL_VERSION" ]]; then
     fi
 
     # Check if the input is between 10 and 15 (inclusive)
-    if (( $INPUT_POSTGRESQL_VERSION < 10 || $INPUT_POSTGRESQL_VERSION > 15 )); then
+    if (( INPUT_POSTGRESQL_VERSION < 10 || INPUT_POSTGRESQL_VERSION > 15 )); then
         echo "Error: $INPUT_POSTGRESQL_VERSION is not between 10 and 15 (inclusive)."
         exit 1
     fi
