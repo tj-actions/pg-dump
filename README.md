@@ -7,6 +7,8 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
 
 ## Usage
 
+### Using the default PostgreSQL installed on the runner
+
 ```yaml
 ...
     steps:
@@ -15,6 +17,21 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
         uses: tj-actions/pg-dump@v2.3
         with:
           database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
+          path: "backups/backup.sql" 
+          options: "-O"   
+```
+
+### Using a different PostgreSQL version
+
+```yaml
+...
+    steps:
+      - uses: actions/checkout@v2
+      - name: Postgres Dump Backup
+        uses: tj-actions/pg-dump@v2.3
+        with:
+          database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
+          postgresql_version: "15"  # Note: Only the major version is required e.g. 12, 14, 15
           path: "backups/backup.sql" 
           options: "-O"   
 ```
