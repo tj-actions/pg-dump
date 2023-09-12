@@ -2,6 +2,9 @@ name: pg-dump
 description: Run pg_dump to generate a backup
 author: tj-actions
 inputs:
+  postgresql_version: 
+    description: 'Version of PostgreSQL. e.g 15'
+    required: false
   database_url:
     description: 'Database URL'
     required: true
@@ -16,10 +19,20 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - name: Setup PostgreSQL
+      uses: tj-actions/install-postgresql@v2
+      if: inputs.postgresql_version != ''
+      with:
+        postgresql-version: ${{ inputs.postgresql_version }}
     - run: |
-        mkdir -p $(dirname "${{ inputs.path }}")
-        pg_dump ${{ inputs.options }} -d "${{ inputs.database_url }}" > "${{ inputs.path }}"
+        bash $GITHUB_ACTION_PATH/entrypoint.sh
       shell: bash
+      env:
+        # INPUT_<VARIABLE_NAME> is not available in Composite run steps
+        # https://github.community/t/input-variable-name-is-not-available-in-composite-run-steps/127611
+        INPUT_PATH: ${{ inputs.path }}
+        INPUT_DATABASE_URL: ${{ inputs.database_url }}
+        INPUT_OPTIONS: ${{ inputs.options }}
 branding:
   icon: hard-drive
   color: white
