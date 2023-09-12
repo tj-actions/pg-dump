@@ -14,7 +14,7 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
     steps:
       - uses: actions/checkout@v2
       - name: Postgres Dump Backup
-        uses: tj-actions/pg-dump@v2.3
+        uses: tj-actions/pg-dump@v3
         with:
           database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
           path: "backups/backup.sql" 
@@ -28,7 +28,7 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
     steps:
       - uses: actions/checkout@v2
       - name: Postgres Dump Backup
-        uses: tj-actions/pg-dump@v2.3
+        uses: tj-actions/pg-dump@v3
         with:
           database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
           postgresql_version: "15"  # Note: Only the major version is required e.g. 12, 14, 15

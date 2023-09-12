@@ -1,5 +1,51 @@
 # Changelog
 
+# [3.0](https://github.com/tj-actions/pg-dump/compare/v2.7...v3.0) - (2023-09-12)
+
+## <!-- 0 -->🚀 Features
+
+- Add support for installing postgresql ([#135](https://github.com/tj-actions/pg-dump/issues/135)) ([ecfbb93](https://github.com/tj-actions/pg-dump/commit/ecfbb9388d000212111259226abfe3550180124d))  - (Tonye Jack)
+
+## <!-- 17 -->➖ Remove
+
+- Deleted .github/ISSUE_TEMPLATE/feature_request.yaml ([f975e14](https://github.com/tj-actions/pg-dump/commit/f975e14c5a13124502f078d3e8321f5b26a99740))  - (Tonye Jack)
+- Deleted .github/ISSUE_TEMPLATE/bug_report.yaml ([35bd3b2](https://github.com/tj-actions/pg-dump/commit/35bd3b2a4666c851e66251a5e07c23dce6aad0a9))  - (Tonye Jack)
+- Deleted .github/FUNDING.yml ([b3ad7cd](https://github.com/tj-actions/pg-dump/commit/b3ad7cd80fab04dc4c4423d5e6560bf64625157d))  - (Tonye Jack)
+- Deleted .github/workflows/auto-merge.yml ([6c97cae](https://github.com/tj-actions/pg-dump/commit/6c97caec7bcb4a020c1d2e6913a63c7094db8b20))  - (Tonye Jack)
+
+## <!-- 26 -->🔄 Update
+
+- Update README.md ([9bfb271](https://github.com/tj-actions/pg-dump/commit/9bfb271922b28a08b253c4425bdb30a55ef68bb4))  - (Tonye Jack)
+- Updated README.md
+ ([4fb0426](https://github.com/tj-actions/pg-dump/commit/4fb04264e7c810a26bbda4b8b99d22ac85e083e9))  - (jackton1)
+- Update test.yml ([d9e5a3f](https://github.com/tj-actions/pg-dump/commit/d9e5a3fe4f8b0a1c5ded63906680ab05b9bb4da9))  - (Tonye Jack)
+- Update actions/checkout action to v4 ([4578612](https://github.com/tj-actions/pg-dump/commit/4578612adaa3a574d8a835b7129ee9d26d7b04c4))  - (renovate[bot])
+- Update tj-actions/release-tagger action to v4 ([b5cce35](https://github.com/tj-actions/pg-dump/commit/b5cce35e7dc0e3b030297c0b2ecdae4fb51f4991))  - (renovate[bot])
+- Updated .github/FUNDING.yml ([7a55218](https://github.com/tj-actions/pg-dump/commit/7a552186b55ddb44b66cae2d2d6e8027c2c4ca16))  - (Tonye Jack)
+- Updated .github/FUNDING.yml ([5432bce](https://github.com/tj-actions/pg-dump/commit/5432bce652dec6a4b7f430948e6dfd2aa11be619))  - (Tonye Jack)
+- Updated README.md
+ ([3a9a7d3](https://github.com/tj-actions/pg-dump/commit/3a9a7d3eb2f17f9ca91661a68605aff5778809b3))  - (repo-ranger[bot])
+- Update tj-actions/auto-doc action to v3 ([be5f109](https://github.com/tj-actions/pg-dump/commit/be5f10963d674e9fabeedf3a4e714aecfd43d0b8))  - (renovate[bot])
+- Updated renovate.json ([9eab830](https://github.com/tj-actions/pg-dump/commit/9eab8304fa31f7784845b0907b76b412e9ee8632))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#136](https://github.com/tj-actions/pg-dump/pull/136): README.md ([85e49d0](https://github.com/tj-actions/pg-dump/commit/85e49d0be43fcc7bc5b9b777a44b43b03b9c12d7))  - (repo-ranger[bot])
+- PR [#131](https://github.com/tj-actions/pg-dump/pull/131): actions/checkout action to v4 ([dc9478a](https://github.com/tj-actions/pg-dump/commit/dc9478a8c202e1a3f0b0b1113c2f4a90489dad49))  - (repo-ranger[bot])
+- PR [#130](https://github.com/tj-actions/pg-dump/pull/130): tj-actions/release-tagger action to v4 ([a1064e1](https://github.com/tj-actions/pg-dump/commit/a1064e1ef6de9b4f9384d6b198560aed51782204))  - (repo-ranger[bot])
+- PR [#129](https://github.com/tj-actions/pg-dump/pull/129): README.md ([56a1d39](https://github.com/tj-actions/pg-dump/commit/56a1d392b4cb1e255205499d76d4387f1a033a5b))  - (repo-ranger[bot])
+- PR [#128](https://github.com/tj-actions/pg-dump/pull/128): tj-actions/auto-doc action to v3 ([500095a](https://github.com/tj-actions/pg-dump/commit/500095ac4a9e52521cf08cb88ceae39e60ab849f))  - (repo-ranger[bot])
+- Auto updated backup.sql.
+ ([7123948](https://github.com/tj-actions/pg-dump/commit/7123948d38deef5b3d69303eda2c7f4cbb8cde45))  - (github-actions[bot])
+- Merge be5f10963d674e9fabeedf3a4e714aecfd43d0b8 into 9eab8304fa31f7784845b0907b76b412e9ee8632
+ ([ba776a7](https://github.com/tj-actions/pg-dump/commit/ba776a730a9688565d47db29c3030ffa9e879d9d))  - (renovate[bot])
+
+## <!-- 9 -->⬆️ Upgrades
+
+- Upgraded to v2.7 ([#127](https://github.com/tj-actions/pg-dump/issues/127))
+
+Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([2014939](https://github.com/tj-actions/pg-dump/commit/201493993feea3af0e2402a8e4d620b6c9e8bd16))  - (tj-actions[bot])
+
 # [2.7](https://github.com/tj-actions/pg-dump/compare/v2.6...v2.7) - (2023-07-05)
 
 ## <!-- 13 -->📦 Bumps
