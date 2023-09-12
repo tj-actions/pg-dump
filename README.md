@@ -33,11 +33,12 @@ Support this project with a :star:
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|                                INPUT                                 |  TYPE  | REQUIRED | DEFAULT |                                                DESCRIPTION                                                 |
-|----------------------------------------------------------------------|--------|----------|---------|------------------------------------------------------------------------------------------------------------|
-| <a name="input_database_url"></a>[database\_url](#input_database_url) | string |   true   |         |                                                Database URL                                                |
-|        <a name="input_options"></a>[options](#input_options)         | string |   true   | `"-O"`  | Extra [options](https://www.postgresql.org/docs/current/app-pgdump.html#PG-DUMP-OPTIONS) passed to pg\_dump |
-|             <a name="input_path"></a>[path](#input_path)             | string |   true   |         |                                        Backup file output location                                         |
+|                                         INPUT                                          |  TYPE  | REQUIRED | DEFAULT |                                                DESCRIPTION                                                 |
+|----------------------------------------------------------------------------------------|--------|----------|---------|------------------------------------------------------------------------------------------------------------|
+|          <a name="input_database_url"></a>[database\_url](#input_database_url)          | string |   true   |         |                                                Database URL                                                |
+|                 <a name="input_options"></a>[options](#input_options)                  | string |   true   | `"-O"`  | Extra [options](https://www.postgresql.org/docs/current/app-pgdump.html#PG-DUMP-OPTIONS) passed to pg\_dump |
+|                      <a name="input_path"></a>[path](#input_path)                      | string |   true   |         |                                        Backup file output location                                         |
+| <a name="input_postgresql_version"></a>[postgresql\_version](#input_postgresql_version) | string |  false   |         |                                       Version of PostgreSQL. e.g 15                                        |
 
 <!-- AUTO-DOC-INPUT:END -->
 
