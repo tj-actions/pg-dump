@@ -22,11 +22,10 @@ jobs:
 
   test-postgresql:
     name: Test pg_dump with PostgreSQL version
-    runs-on: ${{ matrix.platform }}
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        platform: [ubuntu-latest, windows-latest, macos-latest, macos-11]
         postgresql_version: [12, 14, 15]
     services:
       postgres:
