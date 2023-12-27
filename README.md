@@ -65,6 +65,8 @@ Support this project with a :star:
 
 This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter).
 
+* [install-postgresql](https://github.com/tj-actions/install-postgresql)
+
 ## Report Bugs
 
 Report bugs at https://github.com/tj-actions/pg-dump/issues.
