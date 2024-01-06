@@ -1,5 +1,39 @@
 # Changelog
 
+# [3.0.1](https://github.com/tj-actions/pg-dump/compare/v3.0...v3.0.1) - (2023-12-29)
+
+## <!-- 17 -->➖ Remove
+
+- Deleted .github/workflows/auto-approve.yml ([717bb57](https://github.com/tj-actions/pg-dump/commit/717bb5702c42e438cea123356395b5c7145f9380))  - (Tonye Jack)
+- Deleted .github/workflows/greetings.yml ([35c09d6](https://github.com/tj-actions/pg-dump/commit/35c09d6958bf8126ff3a27d1d34db26369cdb855))  - (Tonye Jack)
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md
+ ([ab3c8d4](https://github.com/tj-actions/pg-dump/commit/ab3c8d418d01f63ad81bdd47889288910818c6c4))  - (jackton1)
+- Update README.md ([60d0df3](https://github.com/tj-actions/pg-dump/commit/60d0df38cd798556b04c0aeb7854f8fa87f96dae))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#141](https://github.com/tj-actions/pg-dump/pull/141): update tj-actions/verify-changed-files action to v17 ([c826d55](https://github.com/tj-actions/pg-dump/commit/c826d55715b153f5572006e464e69b2bf0422fea))  - (repo-ranger[bot])
+- PR [#140](https://github.com/tj-actions/pg-dump/pull/140): README.md ([52be0e5](https://github.com/tj-actions/pg-dump/commit/52be0e589248cdea38d365c6f04eaf24fc763875))  - (repo-ranger[bot])
+- PR [#139](https://github.com/tj-actions/pg-dump/pull/139): update github/codeql-action action to v3 ([54fe7e3](https://github.com/tj-actions/pg-dump/commit/54fe7e35687451471371e85ecaf3ad97fba73c91))  - (repo-ranger[bot])
+- PR [#138](https://github.com/tj-actions/pg-dump/pull/138): update tj-actions/install-postgresql action to v3 ([398471d](https://github.com/tj-actions/pg-dump/commit/398471ddfaf5279e994b44381a1a1e52cdee8d8a))  - (repo-ranger[bot])
+- Auto updated backup.sql.
+ ([b473445](https://github.com/tj-actions/pg-dump/commit/b47344576b238916a498e9ae2df09abbab2ab6e7))  - (github-actions[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- **deps:** Update tj-actions/verify-changed-files action to v17 ([d75f046](https://github.com/tj-actions/pg-dump/commit/d75f0462278c4a124a5ebc056b9f9ea103f07b6d))  - (renovate[bot])
+- **deps:** Update github/codeql-action action to v3 ([b0f85a7](https://github.com/tj-actions/pg-dump/commit/b0f85a7d855373aeae742ec8b34a175bb469e79c))  - (renovate[bot])
+- **deps:** Update tj-actions/install-postgresql action to v3 ([d5d9cdb](https://github.com/tj-actions/pg-dump/commit/d5d9cdb82e19ad43a46e21d2b3899d4a5e499ce1))  - (renovate[bot])
+
+## <!-- 9 -->⬆️ Upgrades
+
+- Upgraded to v3 ([#137](https://github.com/tj-actions/pg-dump/issues/137))
+
+Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([f897837](https://github.com/tj-actions/pg-dump/commit/f8978376ad2359d7db905cd17d58b1bb726425a8))  - (tj-actions[bot])
+
 # [3.0](https://github.com/tj-actions/pg-dump/compare/v2.7...v3.0) - (2023-09-12)
 
 ## <!-- 0 -->🚀 Features
