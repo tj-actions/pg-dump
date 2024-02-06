@@ -1,4 +1,4 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3cc349580b7d45b6ae4c36ebd0811a1f)](https://app.codacy.com/gh/tj-actions/pg-dump/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3cc349580b7d45b6ae4c36ebd0811a1f)](https://app.codacy.com/gh/tj-actions/pg-dump/dashboard?utm_source=gh\&utm_medium=referral\&utm_content=\&utm_campaign=Badge_grade)
 [![CI](https://github.com/tj-actions/pg-dump/actions/workflows/test.yml/badge.svg)](https://github.com/tj-actions/pg-dump/actions/workflows/test.yml) [![Update release version.](https://github.com/tj-actions/pg-dump/actions/workflows/sync-release-version.yml/badge.svg)](https://github.com/tj-actions/pg-dump/actions/workflows/sync-release-version.yml) [![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fused-by.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3Dtj-actions%2Fpg-dump%26badge%3Dtrue)](https://github.com/search?o=desc\&q=tj-actions+pg-dump+path%3A.github%2Fworkflows+language%3AYAML\&s=\&type=Code)
 
 ## pg-dump
