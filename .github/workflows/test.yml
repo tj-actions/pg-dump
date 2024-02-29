@@ -56,7 +56,7 @@ jobs:
       - name: Check changes to the backup file.
         id: changed_backup
         if: matrix.platform == 'ubuntu-latest'
-        uses: tj-actions/verify-changed-files@v18
+        uses: tj-actions/verify-changed-files@v19
         with:
           files: backups/${{ matrix.postgresql_version }}/backup.sql
           
@@ -105,7 +105,7 @@ jobs:
 
       - name: Check changes to backup file.
         id: changed_backup
-        uses: tj-actions/verify-changed-files@v18
+        uses: tj-actions/verify-changed-files@v19
         with:
           files: backups/backup.sql
           
