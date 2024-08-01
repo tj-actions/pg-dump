@@ -17,7 +17,7 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
 ```yaml
 ...
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Postgres Dump Backup
         uses: tj-actions/pg-dump@v3
         with:
@@ -31,7 +31,7 @@ Run [pg\_dump](https://www.postgresql.org/docs/9.6/app-pgdump.html) to generate 
 ```yaml
 ...
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Postgres Dump Backup
         uses: tj-actions/pg-dump@v3
         with:
