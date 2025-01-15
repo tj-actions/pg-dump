@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: shellcheck
-        uses: reviewdog/action-shellcheck@v1.28
+        uses: reviewdog/action-shellcheck@v1.29
 
   test-postgresql:
     name: Test pg_dump with PostgreSQL version
